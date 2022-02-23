@@ -6,7 +6,7 @@
 /*   By: xcarroll <xcarroll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 16:17:55 by xcarroll          #+#    #+#             */
-/*   Updated: 2022/02/24 00:20:52 by xcarroll         ###   ########.fr       */
+/*   Updated: 2022/02/24 00:30:39 by xcarroll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,12 +76,12 @@ void	print_content(char *address, int size, int i)
 	}
 	if (address[i] == '\0')
 		print_hex(address[i]);
-	if (i != size)
+	while (i != size)
 	{
-		ft_putchar('\t');
+		ft_putchar(' ');
+		i++;
 	}
 	i = 0;
-	ft_putchar(' ');
 	while (address[i] != '\0' && i < size)
 	{
 		if (address[i] >= ' ' && address[i] <= '~')
